@@ -10,4 +10,11 @@ Vagrant::Config.run do |config|
   config.vm.box_url = "http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130731.box"
   config.vm.customize ["modifyvm", :id, "--memory", 6164]
   config.vm.network :hostonly, "192.168.33.10"
+
+  config.vm.provision :chef_solo do |chef|
+    chef.add_recipe("ssh")
+    # chef.add_recipe("deploy")
+    # chef.add_recipe("prepare_filesystem")
+    # chef.add_recipe("configure")
+  end
 end
