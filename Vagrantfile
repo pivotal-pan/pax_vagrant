@@ -11,8 +11,12 @@ Vagrant::Config.run do |config|
   config.vm.customize ["modifyvm", :id, "--memory", 6164]
   config.vm.network :hostonly, "192.168.33.10"
 
+  config.vm.share_folder "CetasMain", "/root/workspace/CetasMain", "/Users/pivotal/workspace/CetasMain"
+  config.vm.share_folder "CetasXLibs", "/root/workspace/xlibs", "/Users/pivotal/workspace/CetasMain"
+
   config.vm.provision :chef_solo do |chef|
     chef.add_recipe("ssh")
+    chef.add_recipe("yum")
     # chef.add_recipe("deploy")
     # chef.add_recipe("prepare_filesystem")
     # chef.add_recipe("configure")
