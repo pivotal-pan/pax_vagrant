@@ -17,7 +17,7 @@ Vagrant::Config.run do |config|
   config.vm.provision :chef_solo do |chef|
     chef.add_recipe("ssh")
     chef.add_recipe("yum")
-    # chef.add_recipe("deploy")
+    chef.add_recipe("deploy")
     # chef.add_recipe("prepare_filesystem")
     # chef.add_recipe("configure")
   end
