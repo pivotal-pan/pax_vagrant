@@ -1,4 +1,10 @@
-fancy_directories = ["/opt/apache/hadoop-0.20.2-cdh3u5/logs/", "/var/cetasdata", "/var/cetasdata/zookeeper"]
+fancy_directories = %w(/opt/apache/hadoop-0.20.2-cdh3u5/logs/
+/var/cetasdata
+/var/cetasdata/zookeeper
+/var/cetasdata/hdfs
+/var/cetasdata/hdfs/tmp
+/var/cetasdata/hdfs/tmp/dfs
+/var/cetasdata/hdfs/tmp/dfs/namesecondary)
 
 fancy_directories.each do |dir|
   directory dir do
