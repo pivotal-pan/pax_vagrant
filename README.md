@@ -15,7 +15,10 @@ This will build and install the server in a virtual machine on your local develo
 ## Steps
 
 1. vagrant up
-2. visit http://192.168.33.10 with your browser -- it may take a few minutes
+2. ssh root@192.168.33.10 /opt/cetas/bin/start_services.sh (password: vagrant)
+3. visit http://192.168.33.10 with your browser -- it may take a few minutes
+
+the current version start_services.sh will reboot the vm the first time, so it can't be run as a chef recipe.
 
 ## Useful vagrant commands
 
