@@ -20,6 +20,5 @@ Vagrant::Config.run do |config|
     chef.add_recipe("deploy")
     chef.add_recipe("prepare_filesystem")
     chef.add_recipe("configure")
-    chef.add_recipe("launch_services")
   end
 end
