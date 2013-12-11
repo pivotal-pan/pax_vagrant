@@ -12,8 +12,8 @@ Vagrant::Config.run do |config|
   config.vm.customize ["modifyvm", :id, "--cpus", 4]
   config.vm.network :hostonly, "192.168.33.10"
 
-  config.vm.share_folder "CetasMain", "/root/workspace/CetasMain", "/Users/pivotal/workspace/CetasMain"
-  config.vm.share_folder "CetasXLibs", "/root/workspace/xlibs", "/Users/pivotal/workspace/CetasMain"
+  config.vm.share_folder "PaxMain", "/root/workspace/PaxMain", "/Users/pivotal/workspace/PaxMain"
+  config.vm.share_folder "PaxXLibs", "/root/workspace/xlibs", "/Users/pivotal/workspace/PaxMain"
 
   config.vm.provision :chef_solo do |chef|
     chef.add_recipe("ssh")

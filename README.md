@@ -5,7 +5,7 @@ This will build and install the server in a virtual machine on your local develo
 ## Assumptions
 
 1. You are working on a modern iMac configured with the standard Pivotal workstation tooling (c.f. Sprout)
-2. Your CetasMain repo is located at /Users/pivotal/workspace/CetasMain
+2. Your PaxMain repo is located at /Users/pivotal/workspace/PaxMain
 3. Your xlibs are located at /Users/pivotal/workspace/xlibs[1]
 
 ## Prerequisites
